@@ -1,0 +1,10 @@
+
+<ion-view title="Videos - {{ video.title }}">
+  <ion-content padding="true" overflow-scroll="true">
+
+    <video controls="controls" preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+      <source ng-src="{{ trustSrc(video.file_url) }}" type="video/mp4"/>
+    </video>
+
+  </ion-content>
+</ion-view>

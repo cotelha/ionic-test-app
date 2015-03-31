@@ -1,0 +1,23 @@
+/* Empty. Add your own CSS if you like */
+
+
+video {
+  max-width: 100%    !important;
+  max-height: 100%   !important;
+  height: auto       !important;
+}
+
+
+/* Login screen */
+
+#login {
+  position: relative;
+  text-align: center;
+  top: 50px;
+}
+
+.bar.login-error {
+  display: block;
+  text-align: center;
+  line-height: 30px;
+}

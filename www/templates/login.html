@@ -1,0 +1,46 @@
+<ion-view title="Identifique-se">
+  <ion-content>
+
+    <div class="login-error bar bar-loading bar-assertive" ng-if="loginError.show">
+      {{ loginError.message }}
+    </div>
+
+    <form>
+
+      <div id="login">
+
+        <div class="row" ng-class="{'has-error': loginError.show}">
+
+          <div class="col col-80 col-offset-10 list">
+
+            <label class="item item-input">
+              <input type="text" ng-model="user.email" placeholder="Email">
+            </label>
+            <label class="item item-input">
+              <input type="password" ng-model="user.password" placeholder="Senha">
+              <input type="hidden" ng-model="user.app_version">
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col col-80 col-offset-10 list">
+            <button class="button button-block button-balanced" ng-click="signIn(user)" ng-disabled="loginRunning">
+              <span ng-if="!loginRunning">
+                <i class="icon ion-checkmark-round"></i> Login
+              </span>
+              <span ng-if="loginRunning">
+                <i class="icon ion-refreshing"></i>
+              </span>
+            </button>
+            <p class="text-center">
+              <a href="#/forgot-password">Esqueceu a senha?</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </ion-content>
+</ion-view>
